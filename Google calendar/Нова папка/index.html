@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		form{
+			margin-bottom: 20px;
+			border: 1px solid black;
+			width: fit-content;
+			padding: 10px;
+		}
+
+		table{
+			border-collapse: collapse;
+			margin-bottom: 20px;
+		}
+		th, td{
+			border: 1px solid black;
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+
+	<form id="meetForm">
+		<label>
+			Meet: <input value="Daily meeting" type="text" data-id="meetName" required>
+		</label>
+
+		<label>
+			Meeting room:
+			<select data-id="meetRoom"></select>
+		</label>
+
+		<label>
+			Participants:
+			<select data-id="meetParticipants" multiple>
+				<option value="Igor">Igor</option>
+				<option value="Nina" selected>Nina</option>
+				<option value="Vladimir" selected>Vladimir</option>
+				<option value="Anna">Anna</option>
+			</select>
+		</label>
+
+		<label>
+			Hours
+			<select data-id="meetHours"></select>
+		</label>
+
+		<label>
+			Days
+			<select data-id="meetDays"></select>
+		</label>
+
+		<button>Add meet</button>
+	</form>
+
+	<div id="meetTables"></div>
+
+	<script src="script.js"></script>
+</body>
+</html>
